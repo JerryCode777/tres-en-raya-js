@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    margin: 0;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+}
+
+#gameBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #161b22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cell:hover {
+    background-color: #21262d;
+    transform: scale(1.05);
+}
+
+.cell.x {
+    color: #f85149; /* Red for X */
+}
+
+.cell.o {
+    color: #09ff1d; /* Green for O */
+}
+
+.cell.winning-cell {
+    background-color: #30363d; /* Un color un poco más claro que el fondo original */
+}
+
+
+.status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: #c9d1d9;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+#resetButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #238636;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#resetButton:hover {
+    background-color: #4bbd60;
+    transform: scale(1.05);
+}
+
+.winner {
+    color: #e3b341; /* Yellow for the winner status */
+}
+
+#playerSelection {
+    margin-bottom: 20px;
+}
+
+#playerSelection button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #238636;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#playerSelection button:hover {
+    background-color: #2ea043;
+    transform: scale(1.05);
+}

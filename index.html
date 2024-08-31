@@ -8,7 +8,12 @@
 </head>
 <body>
     <h1>Tres-en-raya</h1>
-    <div id="gameboard">
+    <div id="playerSelection">
+        <p>Elige tu simbolo:</p>
+        <button id="playerX">X</button>
+        <button id="playerO">O</button>
+    </div>
+    <div id="gameBoard" style="display: none;">
         <div class="cell" data-index="0"></div>
         <div class="cell" data-index="1"></div>
         <div class="cell" data-index="2"></div>
@@ -19,9 +24,10 @@
         <div class="cell" data-index="7"></div>
         <div class="cell" data-index="8"></div>
     </div>
-    <p id="status" class="winner status">Player X turn</p>
-    <button id="resetButton">Restart Game</button>
+    <p id="status" class="status">Inicializador</p>
+    <button id="resetButton" style="display: none;">Reiniciar Juego</button>
+
     <script src="script.js"></script>
-    
 </body>
+
 </html>
